@@ -1,0 +1,189 @@
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body{
+    background-color: #48b7e070;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 175vh;
+    font-family: 'Courier New', Courier, monospace;
+
+
+}
+.texto{
+ 
+    background-position: center;
+    text-align: center;
+    margin: 0% 20px;
+}
+.text{
+    height: 14%;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 100px;
+    margin: 4% 40px;
+}
+
+.text h1{
+    color: black;
+    font-size: 40px;
+
+}
+
+
+
+.galeria{
+    margin: 4% 40px;
+}
+
+.galeria h1{
+    text-align:center;
+    color: black;
+    font-size: 38px;
+    padding-bottom: 15px;
+}
+
+.galeria .foto{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.galeria .video{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.galeria .foto .imgs{
+    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.galeria .foto img{
+    margin: 2% 30px;
+    border: 3px solid white;
+    border-radius: 18px;
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.galeria .video .vids{
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.galeria .video img{
+    margin: 2% 30px;
+    border: 3px solid white;
+    border-radius: 18px;
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+.container img:hover, video:hover{
+    transform: scale(1.06);
+    cursor: pointer;
+}
+@keyframes glitter {
+    0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glitter 5s linear infinite;
+    opacity: 0;
+}
+
+.glitter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Brilhos não interferem com cliques */
+    overflow: hidden;
+}
+
+.glitter-container .glitter:nth-child(odd) {
+    animation-duration: 4s;
+}
+
+.glitter-container .glitter:nth-child(even) {
+    animation-duration: 6s;
+}
+@keyframes star-twinkle {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: star-twinkle 3s linear infinite;
+    opacity: 0.8;
+}
+
+.star-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.star-container .star:nth-child(odd) {
+    animation-duration: 4s;
+}
+
+.star-container .star:nth-child(even) {
+    animation-duration: 5s;
+}
